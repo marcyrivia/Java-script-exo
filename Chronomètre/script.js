@@ -9,24 +9,24 @@ let secondes = 0
 
 let timeout
 
-let estArreter = true;
+let estArrete = true;
 
 const demarrer = () => {
-    if(estArreter){
-        estArreter = false
+    if(estArrete){
+        estArrete = false
         defilerTemps()
     }
 }
 
-const estArreter = () => {
-    if(!estArreter){
-        estArreter = true
+const arreter = () => {
+    if(!estArrete){
+        estArrete = true
         clearTimeout(timeout)
     }
 }
 
 const defilerTemps = () => {
-    if (estArreter) return
+    if (estArrete) return
 
     secondes = parseInt(secondes)
     minutes = parseInt(minutes)
@@ -60,7 +60,7 @@ const defilerTemps = () => {
 
 chrono.textContent = `${heures}:${minutes}:${secondes}`
 
-setTimeout(defilerTemps, 1000)
+timeout = setTimeout(defilerTemps, 1000)
 }
 
 const reset = () => {
@@ -71,3 +71,7 @@ const reset = () => {
     secondes=0
     clearTimeout(timeout)
 }
+
+startBtn.addEventListener("click", demarrer)
+stopBtn.addEventListener("click", arreter)
+resetBtn.addEventListener("click", reset)
