@@ -9,6 +9,8 @@
 </head>
 <body>
 
+    <div class="container"></div>
+
     <label for="password"> Nouveau mot de passe </label>
     <input id="password" type="password"> <button id="show"> <i id="icon"  class="bi bi-eye-fill"> </i> </button>
 
@@ -18,7 +20,7 @@
     <input id="confirmPassword" type="password"> <button id="sw"> <i id="icon"  class="bi bi-eye-fill"> </i> </button> 
 
     <button id="check"> check password </button>
-
+    </div>
  
     <p id="information"> </p>
 
@@ -30,10 +32,12 @@
             <li id="letter" class="invalid"> une minuscule </li>
             <li id="capital" class="invalid"> une majuscule </li>
             <li id="number" class="invalid"> Des chiffres</li>
-            <li id="special" class="invalid"> des caractères spéciaux </li>
+            <li id="special" class="invalid"> des caractères spéciaux *#@+/!? </li>
         </ul>
-
+        
     </div>
+    
+    <p id="indicate">  </p>
 
 
     <script src="script.js"></script>

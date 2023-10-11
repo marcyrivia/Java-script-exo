@@ -11,6 +11,8 @@ let capital = document.querySelector("#capital")
 let length = document.querySelector("#length")
 let number = document.querySelector("#number")
 let special = document.querySelector("#special")
+let force = document.querySelector("#force")
+let indicate = document.querySelector("#indicate")
 
 showPassword.addEventListener('mousedown', function (){
     password.type = "text"
@@ -62,11 +64,13 @@ password.addEventListener("blur", function(){
 })
 
 ///valider les minuscule
-password.addEventListener( 'keyup', function(){
+password.addEventListener( 'input', function(){
+    let score = 0
     var lowerCaseLetters = /[a-z]/g //: G = GLOBAL
     if(password.value.match(lowerCaseLetters)){
         letter.classList.remove("invalid")
         letter.classList.add("valid")
+        score ++
     } else {
         letter.classList.remove("valid")
         letter.classList.add("invalid")
@@ -79,6 +83,7 @@ password.addEventListener( 'keyup', function(){
     if(password.value.match(upperCaseLetters)){
         capital.classList.remove("invalid")
         capital.classList.add("valid")
+        score++
     } else {
         capital.classList.remove("valid")
         capital.classList.add("invalid")
@@ -101,6 +106,7 @@ password.addEventListener( 'keyup', function(){
     if(password.value.length >=8 ){
         length.classList.remove("invalid")
         length.classList.add("valid")
+        score ++
     } else {
         length.classList.remove("valid")
         length.classList.add("invalid")
@@ -114,28 +120,53 @@ password.addEventListener( 'keyup', function(){
 if(password.value.match(specials)){
     special.classList.remove("invalid")
     special.classList.add("valid")
-    console.group("ok")
+    score ++
 } else {
     special.classList.remove("valid")
     special.classList.add("invalid")
-    console.log("ko")
+    
+}
+
+if(score >=2){
+    indicate.innerHTML="faible"
+    indicate.classList.remove("moyen")
+    indicate.classList.add("danger")
+}
+
+if(score >=3){
+    indicate.innerHTML="moyen"
+    indicate.classList.remove("danger")
+    indicate.classList.add("moyen")
+} 
+
+if(score >=4){
+    indicate.innerHTML="fort"
+    indicate.classList.remove("moyen")
+    indicate.classList.add("validate")
 }
 
 
 
+
+// password.addEventListener("focus", function(){
+//     document.getElementById("indicate")
+// })
+
+// password.addEventListener("blur", function(){
+//     document.getElementById("indicate")
+// })
+
+
+
+
+// confirmPassword.addEventListener("focus", function(){
+//     document.getElementById("message")
+// })
+
+// confirmPassword.addEventListener("blur", function(){
+//     document.getElementById("message")
+// })
 })
-
-
-
-
-confirmPassword.addEventListener("focus", function(){
-    document.getElementById("message").style.display = "block"
-})
-
-confirmPassword.addEventListener("blur", function(){
-    document.getElementById("message").style.display = "none"
-})
-
 
 
 
@@ -149,6 +180,9 @@ function checkPassword(){
     let inputPassword = password.value
     let inputConfirmPassword = confirmPassword.value
 
+
+
+    /// validation mot de passe
     if (inputPassword === inputConfirmPassword){
         information.innerHTML = "Mots de passe identique"
         information.classList.add("validate")
