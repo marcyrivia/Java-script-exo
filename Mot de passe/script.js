@@ -10,6 +10,7 @@ let letter = document.querySelector("#letter")
 let capital = document.querySelector("#capital")
 let length = document.querySelector("#length")
 let number = document.querySelector("#number")
+let special = document.querySelector("#special")
 
 showPassword.addEventListener('mousedown', function (){
     password.type = "text"
@@ -62,13 +63,14 @@ password.addEventListener("blur", function(){
 
 ///valider les minuscule
 password.addEventListener( 'keyup', function(){
-    var lowerCaseLetters = /[a-z]/g
+    var lowerCaseLetters = /[a-z]/g //: G = GLOBAL
     if(password.value.match(lowerCaseLetters)){
         letter.classList.remove("invalid")
         letter.classList.add("valid")
     } else {
         letter.classList.remove("valid")
         letter.classList.add("invalid")
+        
     }
 
     ///MAJUSCULE
@@ -82,33 +84,46 @@ password.addEventListener( 'keyup', function(){
         capital.classList.add("invalid")
     }
 
-    ///Nopbre
+    ///Nombre
 
-    var number = /[0-9]/g
-    if(password.value.match(lowerCaseLetters)){
-        letter.classList.remove("invalid")
-        letter.classList.add("valid")
+    var numbers = /[0-9]/g
+    if(password.value.match(numbers)){
+        number.classList.remove("invalid")
+        number.classList.add("valid")
     } else {
-        letter.classList.remove("valid")
-        letter.classList.add("invalid")
+        number.classList.remove("valid")
+        number.classList.add("invalid")
     }
 
 
 
     //// lenght
     if(password.value.length >=8 ){
-        lenght.classList.remove("invalid")
-        lenght.classList.add("valid")
+        length.classList.remove("invalid")
+        length.classList.add("valid")
     } else {
-        lenght.classList.remove("valid")
-        lenght.classList.add("invalid")
+        length.classList.remove("valid")
+        length.classList.add("invalid")
     }
+
+
+
+    /// caractères speciaux
+
+    var specials = /[*#@+/!?]/g
+if(password.value.match(specials)){
+    special.classList.remove("invalid")
+    special.classList.add("valid")
+    console.group("ok")
+} else {
+    special.classList.remove("valid")
+    special.classList.add("invalid")
+    console.log("ko")
+}
+
+
+
 })
-
-
-
-/// NOMBRE
-
 
 
 
