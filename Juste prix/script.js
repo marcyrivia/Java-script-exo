@@ -1,5 +1,6 @@
 let nomObjet = ["Une chaise gaming", "un costume d'Halloween", "Un barbecue", "Une Guitare", "Un sac à main", ]
-let imageObjet = ["chaise.png", "costume-halloween.png", "grill.png", "guitare.png", "sac-a-main.png"]
+let imageObjet = ["image/chaise.png", "image/costume-halloween.png", "image/grill.png", "image/guitare.png", "image/sac-a-main.png"];
+
 let prixMystere
 let prixPropose
 let aleatoire
@@ -19,9 +20,9 @@ prixMystere = genereChiffre(100) + 1;
 aleatoire = genereChiffre(5)
 
 function afficheImage(valeur){
-    return "<img src = .../image" + valeur +'"class= img-fluid width = "30%" alt = reponsive img">'
+    return imageObjet + valeur +'"<class= img-fluid width = "30%" alt = reponsive img">'
 }
-image.innerHTML = afficheImage(imageObjet[aleatoire])
+image.innerHTML = afficheImagze(imageObjet[aleatoire])
 nomImage.innerHTML = nomObjet[aleatoire]
 tentative = 10
 affichageTentative.innerHTML = "Il vous reste" + compteurTentative + "tentatives..."
