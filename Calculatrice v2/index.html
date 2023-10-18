@@ -8,41 +8,31 @@
 </head>
 <body>
     
-    <div class="container">
         <div class="calculator">
-            <form>
-                <div class="display">
-                    <input type="text" name="display">
-                </div>
+           <div class="content">
+            <input type="text" placeholder="0" readonly id="screen">
+            <div>
+                <button class="delete">AC</button> <button class="delete">DE</button> <button class="main" >%</button>
+                <button class="main" >/</button>
+            </div>
+            <div>
+                <button>7</button> <button>8</button> <button>9</button>
+                <button class="main" >*</button>
                 <div>
-                    <input type="button" class="bouton AC" value="AC" onclick="display.value= ''">
-                    <input type="button" class="bouton" value+=".">
-                    <input type="button" class="bouton division" value="/" onclick="display.value+= '/'" >
+                    <button>4</button> <button>5</button> <button>6</button>
+                    <button class="main" >-</button>
+                    <div>
+                        <button>1</button> <button>2</button> <button>3</button>
+                        <button class="main" >+</button>
+                        <div>
+                            <button>0
+                            </button>
+                            <button>.</button>
+                            <button class="main">=</button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <input type="button" class="bouton" value="7" onclick="display.value+= '7'">
-                    <input type="button"  class="bouton" value="8" onclick="display.value+= '8'">
-                    <input type="button" class="bouton" value="9" onclick="display.value+= '9'">
-                    <input type="button" class="bouton mult" value="*" onclick="display.value+= '*'">
-                </div>
-                <div>
-                    <input type="button"  class="bouton" value="4" onclick="display.value+= '4'">
-                    <input type="button" class="bouton" value="5" onclick="display.value+= '5'">
-                    <input type="button" class="bouton" value="6" onclick="display.value+= '6'">
-                    <input type="button" class="bouton moins"  value="-" onclick="display.value += '-'">
-                </div>
-                <div>
-                    <input type="button" class="bouton" value="1" onclick="display.value+= '1'">
-                    <input type="button" class="bouton" value="2" onclick="display.value+= '2'">
-                    <input type="button" class="bouton" value="3" onclick="display.value+= '3'">
-                    <input type="button" class="bouton plus" value="+" onclick="display.value+= '+'">
-                </div>
-                <div>
-    
-                    <input type="button" class="bouton"  value="0" onclick="display.value+= '0'">
-                    <input type="button" class="egal"  value="=" onclick="display.value = eval(display.value)">
-                </div>
-            </form>
+           </div> 
         </div>
     </div>
 
