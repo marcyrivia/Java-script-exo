@@ -15,14 +15,14 @@
 
 .content{
     background-color: #222225;
-    padding: 26px;
+    padding: 4vh;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 input{
-    width: 330px;
-    padding: 25px;
+    width: 30vh;
+    padding: 1vh;
     margin: 10px;
     background: transparent;
     border: none;

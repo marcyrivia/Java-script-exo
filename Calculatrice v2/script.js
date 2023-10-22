@@ -38,9 +38,10 @@ buttons.forEach((button) => {
     }
   });
 });
-    function isOperator(value) {
-        return value === "+" || value === "-" || value === "*" || value === "/" || value === "0";
-      }
+
+function isOperator(value) {
+  return value === "+" || value === "-" || value === "*" || value === "/";
+}
 
 function calculate(expression, operator) {
   const [left, right] = expression.split(operator).map(parseFloat);
