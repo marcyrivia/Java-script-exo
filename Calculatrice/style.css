@@ -1,0 +1,144 @@
+
+@font-face {
+    font-family: 'TiltNeon';
+    src: url('TiltNeon-Regular.ttf');
+    
+}
+
+
+body {
+    font-family: 'TiltNeon', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+.calculator {
+    background-color: #18181A;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 95vh;
+    width: 90%;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    list-style: none;
+    font-weight: 400;
+    height: 5vh;
+    color: white;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+
+li{
+    color: white;
+    font-family: TiltNeon-Regular;
+    font-size: 18px;
+    margin-left: 7vh;
+}
+
+input[type="text"] {
+    margin-top: 3vh;
+    width: 97%;
+    height: 25vh;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #18181A;
+    border-color: #6AB6D3;
+    color: white;
+}
+
+.container{
+    height: 57vh;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.case{
+    
+    height: 100%;
+    margin-left: 3.5vh;
+}
+
+
+input[type="button"] {
+    width: 60px;
+    height: 11vh;
+    font-size: 20px;
+    margin: 0.7vh;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #18181A;
+    color: white;
+    
+}
+
+ input.egal {
+    width: 40vh;
+    height: 6vh;
+    margin-bottom: 3vh;
+    font-size: 5vh;
+    color: #6AB6D3;
+    
+}
+
+input.etoile{
+    color: #6AB6D3;
+}
+
+input.barre{
+    color: #6AB6D3;
+}
+
+input.point{
+    color: #6AB6D3;
+}
+
+input.C{
+    color: #BE382F;
+}
+
+input.plus{
+    color: #6AB6D3;
+}
+
+input.moins{
+    color: #6AB6D3;
+}
+
+input[type="button"]:active {
+    background-color: #384566;
+    opacity: 0.5; /* Change la couleur d'arrière-plan lorsqu'on clique sur le bouton */
+}
+    
+
+
+input[type="button"].operator {
+    background-color: #6AB6D3;
+    border-color: #6AB6D3;
+}
+
+input[type="button"].operator:hover {
+    background-color: #6AB6D3;
+    border-color: #6AB6D3;
+}
+

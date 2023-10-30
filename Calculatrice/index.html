@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>calculatrice</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <nav>
+            <ul>
+                <li><a>Calculatrice</a></li>
+                <li><a>Convertisseur</a></li>
+            </ul>
+        </nav>
+        <div>
+            <input type="text" id="screen" readonly />
+        </div>
+        <br />
+        <div class="container">
+            <div class="case">
+
+                
+                <input type="button" class="bouton" value="1" onclick="addToResult('1')" />
+
+
+                <input type="button" class="bouton" value="2" onclick="addToResult('2')" />
+
+
+                <input type="button" class="bouton" value="3" onclick="addToResult('3')" />
+
+
+                <input type="button" class="bouton barre"  value="/" onclick="add('/')" />
+
+
+                <br />
+                <input type="button" class="bouton" value="4" onclick="addToResult('4')" />
+
+
+                <input type="button" class="bouton" value="5" onclick="addToResult('5')" />
+
+
+                <input type="button" class="bouton" value="6" onclick="addToResult('6')" />
+
+
+                <input type="button" class="bouton etoile " value="*" onclick="add('*')" />
+
+                <br />
+
+                <input type="button" class="bouton" value="7" onclick="addToResult('7')" />
+
+                <input type="button" class="bouton" value="8" onclick="addToResult('8')" />
+
+                <input type="button" class="bouton" value="9" onclick="addToResult('9')" />
+
+                <input type="button" class="bouton moins"  value="-" onclick="add('-')" />
+
+                <br />
+
+                <input type="button" class="bouton C"  value="C" onclick="clearResult()" />
+
+
+                <input type="button" class="bouton" value="0" onclick="addToResult('0')" />
+
+
+                <input type="button" class="bouton" value="." onclick="add(',')" />
+
+
+                <input class="bouton plus" type="button" value="+" />
+
+
+                <input  class="bouton egal" type="button" value="=" onclick="calculateResult()" />
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

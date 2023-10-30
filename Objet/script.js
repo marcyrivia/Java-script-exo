@@ -19,25 +19,17 @@ let MobyDick = new Characters("Moby-Dick.jpg","Moby Dick", "", "Baleine redouté
 const character = [ HermanMelville, Achab, Ishmael, Queeqeg, MobyDick,]
 
 
-let createElement = {
-    createCard() {
-        for (let i = 0; i < character.length; i++) {
-            let card = document.createElement("div")
-            card.classList.add("card")
-            card.innerHTML = 
-            `
-             <img id="photo" src="Images/${character[i].Photo}"  alt="Logo">
-             <h2>${character[i].Name}</h2>
-             <ul>
-             <li>${character[i].Age}<li>
-             <li>${character[i].Profession}</li>
-             </ul>
 
+let customElement = document.querySelector('#container');
+    for (i in character) 
 
-            `
-
-           infos.appendChild(card)
-    }
-}}
-
-infos.appendChild(createElement.createCard())
+    customElement.innerHTML += `
+    <div class="card">
+    <img src="Images/${character[i].photo}" alt="">
+    <h2> ${character[i].Name}</h2>
+    <ul> 
+    <li>  </b> ${character[i].Age} </li>
+    <li>    </b> ${character[i].Profession} </li>
+    </ul>
+    </div>
+    `

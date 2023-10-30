@@ -12,6 +12,7 @@ window.location.search
 // let test = (window.location.search).split("&")
 // console.log(test[0])
 
+
 let paremUrl = new  URLSearchParams(window.location.search)
 console.log(paremUrl)
 
@@ -24,7 +25,7 @@ spanLastname.innerHTML +=urlParams
 let paremFirstName = new  URLSearchParams(window.location.search)
 let urlFirstName = paremUrl.get("firstName")
 let spanFirstName = document.querySelector("#spanFirstName")
-spanFirstName.innerHTML +=urlFirstName
+spanFirstName.innerHTML += urlFirstName
 
 let paremAge = new  URLSearchParams(window.location.search)
 let urlAge = paremUrl.get("age")
@@ -53,4 +54,5 @@ spanSelect.innerHTML += urlSelect
 
 let urlAvis = paremUrl.get("avis")
 let spanAvis = document.querySelector("#spanAvis")
-spanAvis.innerHTML += urlAvis
+spanAvis.innerHTML += 
+
